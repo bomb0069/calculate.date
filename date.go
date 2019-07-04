@@ -1,5 +1,7 @@
 package date
 
+import "fmt"
+
 type Date struct {
 	Day   int
 	Month int
@@ -7,5 +9,5 @@ type Date struct {
 }
 
 func (d Date) DiffWith(diffDay Date) string {
-	return "0 Days"
+	return fmt.Sprintf("%d Days", diffDay.Day-d.Day)
 }
